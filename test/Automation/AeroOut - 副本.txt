@@ -1,0 +1,6 @@
+
+ ==== Aerodynamic Analysis Output File ==== 
+
+Surface Area of the Fuselage =         182.985  ft^2
+Wetted Area of the Aircraft  =         737.667  ft^2
+Lift/Drag of the Aircraft    =         15.9917

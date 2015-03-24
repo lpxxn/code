@@ -1,0 +1,15 @@
+var file = new File('e:/abc.txt');
+log(__FILE__);
+file.open(File.WriteOnly);
+var ts = new TextStream(file);
+ts.setFieldWidth(15);
+ts.setFieldAlignment(TextStream.AlignLeft);
+ts.setIntegerBase(16);
+ts.setNumberFlags(TextStream.ShowBase | TextStream.ForcePoint | TextStream.ForceSign | TextStream.UppercaseDigits);
+ts.setRealNumberNotation(TextStream.ScientificNotation);
+ts.setRealNumberPrecision(6);
+ts.writeInteger(-314);
+ts.writeNumber(-2.12345678);
+ts.writeInteger(213);
+ts.writeNumber(3.14232);
+file.close();
