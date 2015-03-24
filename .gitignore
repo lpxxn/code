@@ -73,3 +73,13 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.conf
+bin/WIN32_VC2013_DEBUG/plugins/script/ComScriptUId1.exp
+bin/WIN32_VC2013_DEBUG/plugins/script/ComScriptUId1.ilk
+bin/WIN32_VC2013_DEBUG/plugins/script/Officed1.exp
+bin/WIN32_VC2013_DEBUG/plugins/script/comscriptuid1.pdb
+bin/WIN32_VC2013_DEBUG/plugins/script/officed1.pdb
+bin/WIN32_VC2013_DEBUG/TestOfficed.pdb
+bin/WIN32_VC2013_DEBUG/plugins/script/Officed1.ilk
+bin/WIN32_VC2013_DEBUG/testofficed1.pdb
+bin/WIN32_VC2013_DEBUG/TestOfficed.ilk
