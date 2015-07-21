@@ -1,4 +1,4 @@
-#ifndef GUIUTILS_GLOBAL_H
+﻿#ifndef GUIUTILS_GLOBAL_H
 #define GUIUTILS_GLOBAL_H
 
 #include <QtCore/qglobal.h>

@@ -1,4 +1,4 @@
-#ifndef FILEUTILS_H
+﻿#ifndef FILEUTILS_H
 #define FILEUTILS_H
 
 #include "comutils_global.h"

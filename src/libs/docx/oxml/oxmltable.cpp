@@ -1,4 +1,4 @@
-#include "oxmltable.h"
+﻿#include "oxmltable.h"
 #include "../table.h"
 
 #include <QDomElement>

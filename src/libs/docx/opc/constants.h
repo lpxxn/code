@@ -2,16 +2,21 @@
 #define CONSTANTS_H
 
 namespace Docx {
+
 namespace Constants {
 
 const char OPC_CORE_PROPERTIES[]    = "application/vnd.openxmlformats-package.core-properties+xml";
 const char WML_DOCUMENT_MAIN[]      = "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml";
 const char WML_NUMBERING[]          = "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml";
 const char WML_STYLES[]             = "application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml";
+const char WML_HEADER[]             = "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml";
+const char WML_FOOTER[]             = "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml";
 const char IMAGE[]                  = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image";
 const char EXTERNAL[]               = "External";
-const char  INTERNAL[]              = "Internal";
+const char INTERNAL[]              = "Internal";
 const char OFFICE_DOCUMENT[]        = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
+const char HEADER_REL_TYPE[]        = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header";
+const char FOOTER_REL_TYPE[]        = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer";
 
 // content Types values
 const char CONTENT_TYPES_URI[]      = "[Content_Types].xml";
@@ -31,7 +36,14 @@ const char X_WMF[]                  = "image/x-wmf";
 const char SML_SHEET[]              = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
 const char XML[]                    = "application/xml";
 
+// document rels types
+const char RELATIONSHIP_TYPE_STYLES[]           = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles";
+const char RELATIONSHIP_TYPE_NUMBERING[]        = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering";
 
+// Template Path
+const char TEMPLATE_STYLE_PATH[]                = "./template/styles.xml";
+const char TEMPLATE_NUMBERING_PATH[]            = "./template/numbering.xml";
+const char TEMPLATE_LISTSTYLE_PATH[]            = "./template/listStyle.xml";
 
 }
 }

@@ -1,4 +1,4 @@
-#include "text.h"
+﻿#include "text.h"
 #include "./oxml/oxmltext.h"
 #include "./oxml/oxmlshape.h"
 #include "./parts/documentpart.h"
@@ -168,6 +168,15 @@ void Run::addText(const QString &text)
     //m_rEle
 }
 
+void Run::setText(const QString &text)
+{
+    QDomNodeList nodes = m_rEle.elementsByTagName(QStringLiteral("w:t"));
+    for (int index = nodes.count() - 1; index >=0; index--) {
+        m_rEle.removeChild(nodes.at(index));
+    }
+    addText(text);
+}
+
 QString Run::text() const
 {
     return m_rEle.text();
@@ -300,6 +309,11 @@ void Run::addDrawing(CT_Inline *imline)
 
     m_rEle.appendChild(drawing);
     drawing.appendChild(imline->element());
+}
+
+QDomElement Run::element() const
+{
+    return m_rEle;
 }
 
 

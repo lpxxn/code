@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE SimEditorScheme>
+<SimEditorScheme>
+<scheme name="APDL" curLineColor="#a8cdf1">
+        <style name="comment" color="#006e12" bold="false" italic="true" />
+        <style name="commentblock" color="#006e12" />
+	<style name="number" color="#984b00" bold="false" italic="true" />
+        <style name="command" color="#004990" bold="true" italic="true" />
+        <style name="slashcommand" color="#004990" bold="true" italic="true" />
+        <style name="starcommand" color="#004990" bold="true" italic="true" />
+        <style name="string" color="#6a0057" bold="false" italic="true" />
+	<style name="identifier" color="#806080" bold="false" italic="false" />
+        <style name="argument" color="#800080" bold="false" italic="false" />
+        <style name="function" color="#009db0" bold="true" italic="false" />
+        <style name="processor" color="#6e0202" bold="true" italic="false" />     
+</scheme>
+</SimEditorScheme>
+

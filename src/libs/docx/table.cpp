@@ -1,4 +1,4 @@
-#include "table.h"
+﻿#include "table.h"
 #include "text.h"
 #include "./parts/documentpart.h"
 
@@ -11,7 +11,6 @@ namespace Docx {
 
 const QString strtblRow      = QStringLiteral("w:tr");
 const QString strtblCell     = QStringLiteral("w:tc");
-
 
 Table::Table(DocumentPart *part, const QDomElement &element)
     : m_part(part)

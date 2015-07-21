@@ -43,7 +43,7 @@ Relationship *Relationships::addRelationship(const QString &reltype, const QStri
     return rel;
 }
 
-Part *Relationships::partWithReltype(const QString &reltype)
+Part *Relationships::partWithReltype(const QString &reltype) const
 {
     for (Relationship *s : m_rels.values()) {
         if (s->relType() == reltype)
@@ -125,7 +125,7 @@ Relationship *Relationships::getOrAddExtPart(const QString &reltype, const QStri
 
 Relationships::~Relationships()
 {
-    m_targetPartsByrId.clear();
+    m_targetPartsByrId.clear();    
     m_rels.clear();
 }
 
@@ -167,6 +167,8 @@ QString Relationships::nextrId()
         if (!keys.contains(rId))
             return rId;
     }
+
+    return QStringLiteral("");
 }
 
 

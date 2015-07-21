@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE SimEditorScheme>
+<SimEditorScheme>
+<scheme name="JavaScript">
+        <style name="comment" color="#006e12" bold="false" italic="false" />
+	<style name="commentdoc" color="#006e12" />
+	<style name="commentdockeyword" color="#208630" bgColor="#f0f0f6"  italic="true" />
+	<style name="number" color="#0000ff" bold="false" italic="true" />
+	<style name="keyword" color="#002b7a" bold="true" italic="true" />
+	<style name="singleString" color="#6a0057" bold="false" italic="true" />
+	<style name="doubleString" color="#85278b" bold="false" italic="true" />
+	<style name="identifier" color="#000000" bold="false" italic="false" />
+        <style name="unclosedString" color="#ff4040" bgColor="#a8cdf1" bold="false" italic="false" />
+</scheme>
+</SimEditorScheme>

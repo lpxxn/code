@@ -14,7 +14,7 @@ PackageWriter::PackageWriter(const QString &pkgFile)
     m_writer = new PhysPkgWriter(pkgFile);
 }
 
-PackageWriter::PackageWriter(const QString &pkgFile, const Relationships *pkgRels, const QList<Part *> &parts)
+PackageWriter::PackageWriter(const QString &pkgFile, const Relationships * /*pkgRels*/, const QList<Part *> & /*parts*/)
     : PackageWriter(pkgFile)
 {
 

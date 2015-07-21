@@ -14,6 +14,7 @@
 class QDomDocument;
 
 namespace Docx {
+
 class Run;
 class Text;
 class CT_RPr;
@@ -49,7 +50,7 @@ private:
     QList<Run *> m_runs;
     CT_PPr *m_style;
     friend class CT_PPr;
-
+    friend class DocumentPart;
 };
 
 class DOCX_EXPORT Run
@@ -63,6 +64,8 @@ public:
     void addBreak(WD_BREAK breakType = WD_BREAK::PAGE);
 
     void addText(const QString &text);
+
+    void setText(const QString &text);
 
     QString text() const;
 
@@ -86,6 +89,8 @@ public:
     void setUnderLine(WD_UNDERLINE underline);
 
     void addDrawing(CT_Inline *imline);
+
+    QDomElement element() const;
 
 private:
     InlineShape* scalePicture(InlineShape *picture, const Length &width, const Length &height);

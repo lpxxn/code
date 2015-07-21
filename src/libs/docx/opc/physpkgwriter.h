@@ -3,6 +3,7 @@
 
 #include <QByteArray>
 #include <QList>
+#include <QStringList>
 
 class QZipWriter;
 class QIODevice;
@@ -19,7 +20,7 @@ public:
     ~PhysPkgWriter();
 
 private:
-    QList<QString> m_paths;
+    QStringList m_paths;
     QZipWriter *m_writer;
 };
 }

@@ -54,7 +54,7 @@ enum class WD_UNDERLINE
 
 };
 
-enum class WD_BREAK
+enum WD_BREAK
 {
     LINE,
     PAGE,
@@ -62,6 +62,20 @@ enum class WD_BREAK
     LINE_CLEAR_LEFT,
     LINE_CLEAR_RIGHT,
     LINE_CLEAR_ALL
+};
+
+enum WD_STYLE_TYPE
+{
+    PARAGRAPH,
+    CHARACTER,
+    LIST,
+    TABLE
+};
+
+enum PageNumberType
+{
+    NormalNum,
+    RomanNum
 };
 
 QString underLineToString(WD_UNDERLINE underline);

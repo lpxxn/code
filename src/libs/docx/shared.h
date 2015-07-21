@@ -1,13 +1,15 @@
 #ifndef DOCXSHARED_H
 #define DOCXSHARED_H
 
-#include <QDomElement>
+#include <QDomDocument>
 #include <QByteArray>
 #include <QImage>
 #include <QException>
 
 namespace Docx
 {
+
+QDomDocument docXmlDom(const QString &xmlPath);
 
 QDomElement addOrAssignElement(QDomDocument *dom, QDomElement *parent, const QString &eleName, bool addToFirst = false);
 

@@ -1,7 +1,8 @@
-#include "officescript.h"
-//#include "docxdocument.h"
+﻿#include "officescript.h"
+#include "docxdocument.h"
 #include "xlsxdocument.h"
 #include "xlsxhelper.h"
+#include "docxhelper.h"
 
 #include <comutils/licensemanager.h>
 
@@ -51,7 +52,7 @@ static QScriptValue constructXlsxDocument(QScriptContext* context, QScriptEngine
  * \param context 解释器上下文对象
  * \param engine 解释器对象
  * \return 在解释器中构造的对象
- */ /*
+ */
 static QScriptValue constructDocxDocument(QScriptContext* context, QScriptEngine* engine)
 {
     if (!context->isCalledAsConstructor())
@@ -79,7 +80,7 @@ static QScriptValue constructDocxDocument(QScriptContext* context, QScriptEngine
         return engine->newQObject(docx, QScriptEngine::ScriptOwnership,
                                   QScriptEngine::ExcludeSuperClassContents | QScriptEngine::ExcludeDeleteLater);
     }
-}*/
+}
 
 static void registerFunctions(QScriptValue& officeProto, QScriptEngine *eng)
 {
@@ -109,8 +110,8 @@ void OfficeScript::initialize(const QString &key, QScriptEngine *engine)
 {
     CommonUtils::LicenseManager* licMng = CommonUtils::LicenseManager::instance();
     Q_ASSERT(licMng);
-    if (!licMng->checkout(QStringLiteral("SC.OFFICE"), licMng->featureVersion()))
-        return;
+//    if (!licMng->checkout(QStringLiteral("SC.OFFICE"), licMng->featureVersion()))
+//        return;
 
     if (key == QStringLiteral("office")) {
         QScriptValue global = engine->globalObject();
@@ -118,10 +119,24 @@ void OfficeScript::initialize(const QString &key, QScriptEngine *engine)
         QScriptValue officeObj = engine->newObject();
         global.setProperty(office, officeObj, QScriptValue::Undeletable);
 
-//        QScriptValue docxCtor = engine->newFunction(constructDocxDocument);
-//        QScriptValue metaObject = engine->newQMetaObject(&XlsxDocument::staticMetaObject, docxCtor);
-//        officeObj.setProperty(QStringLiteral("Docx"), metaObject);
+        // docx
+        QScriptValue docxCtor = engine->newFunction(constructDocxDocument);
+        QScriptValue ddocxMetaObject = engine->newQMetaObject(&DocxDocument::staticMetaObject, docxCtor);
+        officeObj.setProperty(QStringLiteral("Docx"), ddocxMetaObject);
+        QScriptValue docx = officeObj.property(QStringLiteral("Docx"));
+        DocxHelper::registerParagraph(engine, docx);
+        DocxHelper::registerRun(engine, docx);
+        DocxHelper::registerTable(engine, docx);
+        DocxHelper::registerCell(engine, docx);
+        DocxHelper::registerListCell(engine, docx);
+        DocxHelper::registerInlineShape(engine, docx);
+        DocxHelper::registerListTables(engine, docx);
+        DocxHelper::registerListParagraphs(engine, docx);
+        DocxHelper::registerSection(engine, docx);
+        DocxHelper::registerHeader(engine, docx);
+        DocxHelper::registerFooter(engine, docx);
 
+        // xlsx
         QScriptValue xlsxCtor = engine->newFunction(constructXlsxDocument);
         QScriptValue metaObject = engine->newQMetaObject(&XlsxDocument::staticMetaObject, xlsxCtor);
         officeObj.setProperty(QStringLiteral("Xlsx"), metaObject);
@@ -129,6 +144,7 @@ void OfficeScript::initialize(const QString &key, QScriptEngine *engine)
         QScriptValue xlsx = officeObj.property(QStringLiteral("Xlsx"));
         XlsxHelper::registerFormat(engine, xlsx);
         XlsxHelper::registerCell(engine, xlsx);
+        XlsxHelper::registerImage(engine, xlsx);
         XlsxHelper::registerWorksheet(engine, xlsx);
 
         registerFunctions(officeObj, engine);

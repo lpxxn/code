@@ -1,0 +1,978 @@
+﻿__dirname
+__filename
+AbortError
+AlignAccountingStyle
+AlignCenter
+AlignHCenter
+AlignLeft
+AlignRight
+Append
+Area
+Arguments
+Array()
+Array(element0, element1, [...], elementn)
+Array(size)
+Assembly(name, [parent])
+AutomationScript(name, [parent])
+abs(x)
+acos(x)
+actionListCode
+actionListFunction
+addBindValue(val)
+addDatabase(type, connectionName)
+additionalIconFilePath
+addSheet([name], [type=WorkSheet])
+allParameterNames()
+append(modelElem)
+appendBuffer(buffer)
+appendColumn(colType, [size])
+appendConstraint(variableName, mode, target, lowBound, upperBound)
+appendConstraintByParameter(par, mode, target,[useParBound=true], [lowBound=0[...], [upperBound=0[...])
+appendDesignVariable(variableName, mode, lowBound, upperBound)
+appendDesignVariableByParameter(par, mode, [useParBound=true], [lowBound=0[...], [upperBound = 0[...])
+appendObjective(variableName, mode, [target=0[...])
+appendObjectiveByParameter(par, mode, [target=0[...])
+appendRowAt(index, value)
+appendString(str)
+apply()
+appPath
+appVersion
+arch()
+args
+arguments()
+arguments[n]
+array
+asin(x)
+at
+atan(x)
+atan2(y,x)
+atEnd()
+attributes()
+autoThrow
+availableExtensions
+Bar
+BarPlusLabel
+BaseDirectory
+BigEndian
+Boolean(value)
+BooleanArrayParameter(name, mode, dims, [parent=null])
+BooleanArrayParameter(name, mode, dims, parentGroupPar)
+BooleanParameter(name, mode, [parent=null])
+BooleanParameter(name, mode, parentGroup)
+BooleanType
+Bubble
+Buffer
+Buffer(buffer)
+Buffer(len)
+Buffer(str)
+Bus(name, [parent])
+base
+basename(p)
+bind()
+bindValue(placeholder|pos, val)
+boundValue(placeholder|pos)
+boundValues()
+byteOrder()
+Cell
+Characters
+ChartSheet
+ChildProcess
+Column
+ColumnPlusLabel
+COM(name, [parent])
+ComInput
+Comment
+ComOutput
+CompositeParameter
+CopyError
+Crashed
+CrashExit
+CustomError
+c1
+c2
+call()
+callComFunction(func, args)
+callComFunctionWithOutputParameter(func, args)
+callee
+caller
+cancel
+canDelete
+ceil(x)
+cellAt(cell)
+cellAt(row, col)
+cellAt(row, column)
+characterOffset()
+charAt(n)
+charCodeAt(n)
+chdir(path)
+check()
+chop(n)
+clear()
+clearModel()
+clearRetrievedResultData(resultId)
+cloneDatabase(other, connectionName)
+cloneParameterByJSON(json)
+close()
+closeDatabase()
+codecName()
+columnCommentAt(index)
+columnCount()
+columnExpressionAt(index)
+columnFormat(column)
+columnLongNameAt(index)
+columnNameAt(index)
+columnSignificanceAt(index)
+columnType(index)
+columnUnitAt(index)
+columnWidth(column)
+commit()
+comProperty(name)
+concat(value, [...])
+condition
+connect(fun)
+connectionName
+connectionNames
+connectOptions
+constructor
+containParameter(name)
+contains(connectionName)
+contains(name)
+containsBuffer(buffer)
+containSimfun(name)
+containsString(str)
+copy(fileName, newName)
+copyDirectory(srcFilePath, targetFilePath)
+copySheet(srcName, distName)
+cos(x)
+count
+countBuffer(buffer)
+countString(str)
+cpus()
+create(proto)
+create(proto, descriptors)
+createLinkByNames(leftParName, rhs)
+createLinkByParameters(leftPar, rightPar)
+createLocalInputTextFile(inputPath, templateFilePar)
+createParametersFromFileParameter(filePar)
+critical(parent, title, text, [detailedText])
+currentModelId
+currentModelId()
+currentResultId
+currentResultId()
+currentWorksheet()
+customFormatEnabled
+cwd()
+Database(name, [parent])
+DatabaseObject
+DataStream
+DataStream(buffer, OpenMode)
+DataStream(file)
+Date()
+Date(datestring)
+Date(milliseconds)
+Date(year, month, day, hours, minutes, seconds, ms)
+DialogSheet
+Docx
+DontConfirmOverwrite
+DontResolveSymlinks
+DontUseCustomDirectoryIcons
+DontUseNativeDialog
+DoubleArrayParameter(name, mode, dims, [parent=null])
+DoubleComplex
+DoubleParameter(name, mode, [parent=null])
+DoubleParameter(name, mode, dims, parentGroupPar)
+DoubleParameter(name, mode, parentGroupPar)
+DoublePrecision
+DTD
+database(connectionName)
+databaseName
+databaseText
+dateTime
+dateTimeColumnAt(index)
+decodeURI(uri)
+decodeURIComponent()
+defaultSwitch
+defineName(name, formula, [comment], [scope])
+defineProperties(o, descriptors)
+defineProperty(o, name, desc)
+deleteModelElement(modelElement)
+deleteSheet(name)
+delimiter
+description
+dimensionNumber
+dimensions
+dirname(p)
+documentEncoding()
+documentProperty(key)
+documentPropertyNames()
+documentVersion()
+doubleColumnAt(index)
+doubleComplexColumnAt(index)
+driverName
+drivers
+driverText
+dynamicModifyModel(code)
+EndDocument
+EndElement
+EntityReference
+Error()
+Error(message)
+ErrorOnUnexpectedElement
+ErrorType
+EvalError()
+EvalError(message)
+encodeSimfunNumber()
+encodeURI(uri)
+encodeURIComponent()
+endianness()
+enterBatchProcessStatus(inBatchProcess)
+enumEnabled
+enumIndex
+enumNames
+enumValues
+env
+eol
+equals(buffer)
+error([arg1], [arg2], [...])
+errorId()
+errorString()
+escape(s)
+eval(code)
+every(fun)
+exclusive
+exec([query])
+exec(string)
+execBatch(mode)
+execPath
+executedQuery
+exists(p)
+exit(returnCode)
+exitCode()
+exitStatus()
+exp(x)
+exports
+externalOpenCode
+externalOpenFunction
+extname(p)
+extractCode
+extractFunction
+FailedToStart
+FatalError
+File
+File(filename)
+FileParameter(name, mode, [parent=null])
+FileParameter(name, mode, parentGroupPar)
+FillArea
+FixedNotation
+Float
+FloatComplex
+FloatingBar
+FloatingColumn
+FontScriptNormal
+FontScriptSub
+FontScriptSuper
+ForcePoint
+ForceSign
+Format(format)
+Function(argument_names, [...], body)
+feedbacks
+fieldName(i)
+fileFilter
+fileName
+filename(p)
+fillColumnAt(colType, index, values)
+filter(fun)
+finish()
+first()
+firstRunIndex
+fixed
+floatColumnAt(index)
+floatComplexColumnAt(index)
+floatingPointPrecision()
+floor(x)
+flush()
+fontSize
+forEach()
+format
+freemem()
+freeze(o)
+from
+fromCharCode(c1, c2, [...])
+fromVariant(value)
+fs
+fs.unzip(zipFile, unzipDir)
+fs.zip(zipFile, zipPath)
+fullName
+Global
+Group
+GroupParameter(name, [parent=null])
+GroupParameter(name, parentGroupPar)
+generateDocument()
+getDate()
+getDay()
+getDouble(parent, title, label, [value=0], [min=-2147483647], [max=2147483647], [decimals=1])
+getExistingDirectory([parent=null], [caption=’’], [dir=’’], [options=ui.ShowDirsOnly])
+getFullYear()
+getHours()
+getInt(parent, title, label, [value=0], [min=-2147483647], [max=2147483647], [step=1]
+getItem(parent, title, label, items, [current=0], [editable=true])
+getMilliseconds()
+getMinutes()
+getMonth()
+getMultiLineText(parent, title, label, [text=’’])
+getOpenFileName([parent=null], [caption=''], [dir=''], [filter=''], [options=0])
+getOpenFileNames([parent=null], [caption=''], [dir=''], [filter=''], [options=0])
+getOwnPropertyDescriptor(o, name)
+getOwnPropertyNames(o)
+getPrototypeOf(o)
+getSaveFileName([parent=null], [caption=''], [dir=''], [filter=''], [options=0])
+getSeconds()
+getText(parent, title, label, [mode=ui.Normal], [text=’’])
+getTime()
+getTimezoneOffset()
+getUTCDate()
+getUTCDay()
+getUTCFullYear()
+getUTCHours()
+getUTCMilliseconds()
+getUTCMinutes()
+getUTCMonth()
+getUTCSeconds()
+getYear()
+globalConnectionNames
+globalContains(connectionName)
+greaterEqual
+groupColumns(colFirst, colLast, [collapsed])
+groupRows(rowFirst, rowLast, [collapsed])
+HideNameFilterDetails
+HorizontalStep
+hasError()
+hasFormula
+hasOwnProperty()
+hostName
+hostname()
+IncludeChildElements
+Infinity
+InlineStringType
+Input
+InputDirectory
+InputFile
+Integer
+IntegerArrayParameter(name, mode, dims, [parent=null])
+IntegerArrayParameter(name, mode, dims, parentGroupPar)
+IntegerParameter(name, mode, [parent=null])
+IntegerParameter(name, mode, parentGroupPar)
+Invalid
+ignoreCase
+importedExtensions
+importExtension([ext1], [ext2], [...])
+increment
+indexOf(name)
+indexOf(substring)
+indexOf(substring, start)
+information(parent, title, text, [detailedText])
+initials
+inModel()
+inputs
+insert(index, modelElem)
+insertColumn(index, colType, [size])
+insertImage (row, col, imgPath)
+insertImage(row, col, imgPath|img)
+insertRowAt(col, row, value)
+insertSheet(index, [name], [type = WordSheet])
+integerColumnAt(index)
+interactCode
+interactFunction
+isActive
+isCDATA()
+isCharacters()
+isColumnHidden(column)
+isComment()
+isDateTime
+isDriverAvailable(name)
+isDTD()
+isEmpty
+isEndDocument()
+isEndElement()
+isEntityReference()
+isExtensible()
+isFinite(n)
+isFormulasVisible()
+isForwardOnly
+isFrozen(o)
+isGridLinesVisible()
+isNaN(x)
+isNull()
+isNull(str|int)
+isOpen
+isOpenError
+isOutlineSymbolsVisible()
+isProcessingInstruction()
+isPrototypeOf(o)
+isRichString
+isRightToLeft()
+isRowColumnHeadersVisible()
+isRowHidden(row)
+isRulerVisible()
+isRunning()
+isSealed(o)
+isSelect
+isSelected()
+isStandaloneDocument()
+isStartDocument()
+isStartElement()
+isTemplate
+isText
+isValid
+isValid()
+isValidate()
+isWhitespace()
+isWhiteSpaceVisible()
+isWindowProtected()
+isZerosVisible()
+iterationCount
+JSON
+join()
+join([path1], [path2], [...])
+keys(o)
+kill()
+Label
+Line
+Linked
+LittleEndian
+LN10
+LN2
+LOG10E
+LOG2E
+Loop(name, [parent])
+Lower
+LowerUpper
+last()
+lastError
+lastIndex
+lastIndexOf(substring)
+lastIndexOf(substring, start)
+lastInsertId()
+lastQuery
+left(len)
+leftHandSide
+length
+lessEqual
+link(srcPath, dstPath)
+links
+load(file1, [file2], [...])
+load(uifile, [parentWidget])
+loadCOMObject(comObject)
+loadModel(fileName, [modelId])
+loadResult(resultId)
+loadScriptFile(scriptFileName)
+localeCompare(target)
+localFileName
+localFileObject()
+log
+log([arg1], [arg2], [...])
+log(x)
+loopParameter
+loopType
+lowerLimit
+lowerLimitEnabled
+MacroSheet
+Math
+MAX_VALUE
+Maximize
+MIN_VALUE
+Minimize
+ModelDataExtract(name, [parent])
+mainWindow
+map(fun)
+match(regexp)
+max(args[...])
+maxResultId()
+mergeCells(range, [format])
+message
+min(args[...])
+mkdir(p)
+mode
+model
+modelFile
+modelId
+moveSheet(srcName, distIndex)
+msleep(mseconds)
+NaN
+NEGATIVE_INFINITY
+NoEcho
+NoError
+None
+Normal
+NormalExit
+NoToken
+NotOpen
+NotRunning
+NotWellFormedError
+Number(value)
+NumberType
+name
+name()
+namespaceUri()
+networkInterfaces()
+next
+next()
+nextResult()
+nextRuns
+normalize(p)
+now()
+numRowsAffected
+Object()
+Object(value)
+Ok
+OpenError
+OuputDirectory
+Output
+OutputDirectory
+OutputFile
+office
+open()
+open(flags)
+open(user, password)
+openedDatabase
+openMode()
+openUrl(url)
+os
+owningSimfun
+Parallel(name, [parent])
+Password
+PasswordEchoOnEdit
+PermissionsError
+PI
+PositionError
+POSITIVE_INFINITY
+PrematureEndOfDocumentError
+ProcessingInstruction
+PSO
+parameterByName(name, [fullName=false])
+parameterFromFullName(fullName)
+parameters
+parentSimfun
+parse()
+parseFloat()
+parseInt(s)
+parseInt(s, radix)
+parseLocalOutputTextFile(outputPath, templateFilePar)
+particlesCount
+path
+pid
+pid()
+placeParameterFromRetrieveData(par, fullName, index)
+pop()
+port
+pos()
+postProcessingCode
+postProcessingFunction
+pow(x,y)
+precision
+prefix()
+prepare(query)
+prepend(modelElem)
+preProcessingCode
+preProcessingFunction
+preventExtensions(o)
+previous
+previous()
+priorities
+process
+processEnvironment()
+processingInstructionData()
+processingInstructionTarget()
+propertyIsEnumerable(propname)
+prototype
+push()
+Qt_5_0
+Qt_5_1
+Qt_5_2
+Qt_5_3
+qtVersion
+qualifiedName()
+query([query])
+question(parent, title, text, [detailedText])
+quit()
+RangeError()
+RangeError(message)
+ReadCorruptData
+ReadError
+ReadOnly
+ReadPastEnd
+ReadWrite
+ReferenceError()
+ReferenceError(message)
+RefInput
+RefOutput
+RegExp(pattern, attributes)
+RemoveError
+RenameError
+RepeatUntil
+ResizeError
+ResourceError
+Running
+raiseError([message])
+random()
+read([arg1], [arg2], [...])
+read(cell)
+read(maxSize)
+read(row, col)
+read(row, column)
+readAll()
+readAllStandardError()
+readAllStandardOutput()
+readBool()
+readdir(p)
+readDouble()
+readElementText([behaviour])
+readFloat()
+readInt16()
+readInt32()
+readInt64()
+readInt8()
+readInteger()
+readLine(maxSize = 0)
+readNext()
+readNextStartElement()
+readNumber()
+readString()
+readUInt16()
+readUInt32()
+readUInt64()
+readUInt8()
+record()
+record(tablename)
+redo
+reduce()
+reduceRight()
+remove(modelElem)
+removeAllParameter()
+removeAllSimfun()
+removeColumnAt(index)
+removeDatabase(connectionName)
+removeParameterAt(index)
+removeSimfunAt(index)
+rename(oldPath, newPath)
+replace(index, newModelElem)
+replace(regexp, replacement)
+require
+require(filename)
+resetStatus()
+respondChangedCode
+respondChangedFunction
+resultData(fullName)
+resultDataCount(fullName)
+resultId
+retrieveData(fullName, resultId)
+reverse()
+rightHandSide
+rmdir(p)
+rollback()
+romFile
+romSimFunction(name, [parent=null])
+round(x)
+rowCount()
+rowFormat(row)
+rowHeight(row)
+runConditionsCode
+runModel()
+runSimfun(sf)
+ScientificNotation
+Sequence(name, [parent])
+SharedStringType
+ShowBase
+ShowDirsOnly
+SimApp(name, [parent])
+SinglePrecision
+SkipChildElements
+SmartNotation
+SplineConnected
+SqlError
+SqlQuery
+SqlRecord
+SQRT1_2
+SQRT2
+StackArea
+StackBar
+StackColumn
+StartDocument
+StartElement
+Starting
+Stick
+String(s)
+StringParameter(name, mode, [parent=null])
+StringParameter(name, mode, parentGroupPar)
+StringType
+Switch(name, [parent])
+SyntaxError()
+SyntaxError(message)
+save()
+saveAs(name)
+saveGraph(data, path, [options])
+saveModel(fileName, [modelId])
+saveToDatabase
+scriptCode
+scriptFunction
+scriptPath()
+seal(o)
+search(regexp)
+seek(i, relative)
+seek(pos)
+selectSheet(name)
+self
+sep
+setBranchCondition(branchSimfun, condition)
+setByteOrder(bo)
+setCodec(codecname)
+setColumnCommentAt(index, comment)
+setColumnExpressionAt(index, expr)
+setColumnFormat (format, colFirst, [colLast])
+setColumnFormat(format, colFirst, [colLast])
+setColumnHidden (hidden, colFirst, [colLast])
+setColumnHidden(hidden, colFirst, [colLast])
+setColumnLongNameAt(index, longName)
+setColumnNameAt(index, name)
+setColumnSignificanceAt(index, sig)
+setColumnUnitAt(index, unit)
+setColumnWidth (width, colFirst, [colLast])
+setColumnWidth(width, colFirst, [colLast])
+setComProperty(name, value)
+setCondition(conditon)
+setDate(day_of_month)
+setDocumentProperty(key, property)
+setFieldAlignment(mode)
+setFieldWidth(width)
+setFloatingPointPrecision(precision)
+setFormulasVisible(visible)
+setFrom(val)
+setFullYear(year)
+setFullYear(year, month)
+setFullYear(year, month, day)
+setGridLinesVisible(visible)
+setHorizontalAlignment(align)
+setHours(hours)
+setHours(hours, minutes)
+setHours(hours, minutes, seconds)
+setHours(hours, minutes, seconds, millis)
+setIncrement(val)
+setIntegerBase(base)
+setLoopParameterByGeneralParameter(par)
+setMilliseconds(millis)
+setMinutes(minutes)
+setMinutes(minutes, seconds)
+setMinutes(minutes, seconds, millis)
+setMonth(month)
+setMonth(month, day)
+setNumberFlags(flags)
+setOutlineSymbolsVisible(visible)
+setPadChar(char)
+setRealNumberNotation(notation)
+setRealNumberPrecision(precision)
+setRightToLeft(enable)
+setRowColumnHeadersVisible(visible)
+setRowFormat(format, rowFirst, [rowLast])
+setRowHeight(height, rowFirst, [rowLast])
+setRowHidden( hidden, rowFirst, [rowLast])
+setRowHidden(hidden, rowFirst, [rowLast])
+setRulerVisible(visible)
+setRunConditionFunction(index, func)
+setSeconds(seconds)
+setSeconds(seconds, millis)
+setSelected(select)
+setStatus(status)
+setTime(milliseconds)
+setTo(val)
+setUTCDate(day_of_month)
+setUTCFullYear(year)
+setUTCFullYear(year, month, day)
+setUTCHours(hours)
+setUTCHours(hours, minutes)
+setUTCHours(hours, minutes, seconds)
+setUTCHours(hours, minutes, seconds, millis)
+setUTCMilliseconds(millis)
+setUTCMinutes(minutes)
+setUTCMinutes(minutes, seconds)
+setUTCMinutes(minutes, seconds, millis)
+setUTCMonth(month)
+setUTCMonth(month, day)
+setUTCSeconds(seconds)
+setUTCSeconds(seconds, millis)
+setValue(index, value)
+setVersion(version)
+setWhiteSpaceVisible(visible)
+setWindowProtected(protect)
+setYear(year)
+setZerosVisible(visible)
+sheetNames()
+shift()
+shortLeftHandSide
+simfunByName(name, [fullName=false])
+simfuns
+sin(x)
+size
+size()
+skipCurrentElement()
+skipRawData(len)
+skipWhiteSpace()
+sleep(seconds)
+slice(start, end)
+some(fun)
+sort()
+source
+spawn(program, [args], [options])
+splice()
+split(delimiter, limit)
+sql
+sqrt(x)
+stat(p)
+state()
+status()
+stayConnected
+stop()
+stopConditionCode
+stopConditionFunction
+stringColumnAt(index)
+stringify(o)
+stringify(o, filter)
+stringify(o, filter, indent)
+substr(start, length)
+substring(from, to)
+suspend
+swap(i, j)
+TableParameter(name, mode, [parent=null])
+TableParameter(name, mode, dims, parentGroupPar)
+Target
+TextStream
+TextStream(buffer, OpenMode)
+TextStream(file)
+Timedout
+TimeOutError
+Truncate
+TypeError()
+TypeError(message)
+tables(type)
+tan(x)
+terminate()
+test(string)
+text
+text()
+tmpdir()
+to
+toDateString()
+toExponential(digits)
+toFixed(digits)
+toGMTString()
+toHexString()
+toISOString()
+toJSON
+toJSON()
+tokenString()
+tokenType()
+toLocaleDateString()
+toLocaleLowerCase()
+toLocaleString()
+toLocaleTimeString()
+toLocaleUpperCase()
+toLowerCase()
+tooltip()
+toPrecision(precision)
+toString()
+toString(radix)
+totalmem()
+toTimeString()
+toUpperCase()
+toUTCString()
+toVariant()
+transaction()
+trim()
+truncate(p, len)
+type
+type()
+UiLoader
+Unbuffered
+UnexpectedElementError
+UnknownError
+UnspecifiedError
+Upper
+UppercaseBase
+UppercaseDigits
+URIError()
+URIError(message)
+UTC()
+ui
+uiInteractive(str|function)
+undefined
+unescape(s)
+unit()
+units
+unlink(path)
+unmergeCells(range)
+unshift()
+upperLimit
+upperLimitEnabled
+uptime()
+userName
+VerticalStep
+VX
+VY
+VZ
+valid
+value
+value()
+value(index)
+value(str|int)
+valueOf()
+version()
+WorkSheet
+WriteError
+WriteFailed
+WriteOnly
+waitForRetrieveDataFinished(fullName, [msecs])
+warning(parent, title, text, [detailedText])
+workDirectory
+workingDirectory()
+worksheet(sheetName)
+write(buffer)
+write(cell, value, [format])
+write(row, col, value, [format])
+write(row, column, value, [format])
+write(str|buf)
+writeBlank(cell, [format])
+writeBlank(row, column, [format])
+writeBool(cell, value, [format])
+writeBool(data)
+writeBool(row, column, value, [format])
+writeDateTime (cell, value, [format])
+writeDateTime(row, column, value, [format])
+writeDouble(data)
+writeFloat(data)
+writeInlineString (cell, value, [format])
+writeInlineString(row, column, value, [format])
+writeInt16(data)
+writeInt32(data)
+writeInt64(data)
+writeInt8(data)
+writeInteger(int)
+writeNumber(num)
+writeNumeric (cell, value, [format])
+writeNumeric(row, column, value, [format])
+writeString (cell, value, [format])
+writeString(data)
+writeString(row, column, value, [format])
+writeString(str)
+writeUInt16(data)
+writeUInt32(data)
+writeUInt64(data)
+writeUInt8(data)
+XError
+Xlsx
+Xlsx()
+Xlsx(filename)
+Xlsx(fileobj)
+XlsxFileParameter
+XmlStreamAttribute
+XmlStreamReader
+XmlStreamReader(file)
+YError

@@ -3,6 +3,8 @@
 
 #include "docx_global.h"
 #include "length.h"
+#include "section.h"
+#include "./headerandfooter.h"
 
 #include <QString>
 #include <QImage>
@@ -10,6 +12,7 @@
 class QIODevice;
 
 namespace Docx {
+
 class Paragraph;
 class Table;
 class DocumentPart;
@@ -36,6 +39,7 @@ public:
     QList<Table*> tables();
     virtual ~Document();
 
+    Section *addSection();
     void save(const QString& path);
 
 private:

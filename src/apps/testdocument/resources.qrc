@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>default.docx</file>
+        <file>c.png</file>
+        <file>139924.jpg</file>
+        <file>149341.jpg</file>
+        <file>185607.jpg</file>
+        <file>Full.docx</file>
+        <file>Full2.docx</file>
+        <file>testStr.txt</file>
+        <file>defaultzh_CN.docx</file>
+    </qresource>
+</RCC>

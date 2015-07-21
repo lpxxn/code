@@ -10,6 +10,7 @@
 #include <QImage>
 
 namespace Docx {
+
 //class Body;
 class CT_Default;
 class Paragraph;
@@ -19,6 +20,10 @@ class InlineShapes;
 class ImagePart;
 class ImageParts;
 class InlineShape;
+class StylesPart;
+class NumberingPart;
+class Section;
+class Sections;
 
 class DocumentPart : public Part
 {
@@ -35,17 +40,25 @@ public:
     QPair<ImagePart *, QString> getOrAddImagePart(ImagePart *imagPart);
     QList<Paragraph*> paragraphs();
     QList<Table*> tables();
+    StylesPart *stylePart();
+    NumberingPart *numberingPart();
     int nextId();
+    Section *addSection();
+    Package *package();
     virtual ~DocumentPart();
 
 private:
-    void findAttributes(const QDomNodeList &eles, const QString &attr, QList<QString> *nums);
+    void findAttributes(const QDomNodeList &eles, const QString &attr, QStringList *nums);
     QDomNode lastsectPr() const;
+    void checkNumbering();
 
 private:
     //Body *m_body;
     QDomDocument *m_dom;
     InlineShapes *m_inlineshapes;
+    StylesPart *m_stylePart = nullptr;
+    NumberingPart *m_numberingPart = nullptr;
+    Sections *m_sections = nullptr;
 
     // add
     QList<Paragraph *> m_addParagraphs;

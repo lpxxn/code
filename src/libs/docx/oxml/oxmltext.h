@@ -1,4 +1,4 @@
-#ifndef OXMLDOCXTEXT_H
+﻿#ifndef OXMLDOCXTEXT_H
 #define OXMLDOCXTEXT_H
 
 #include "xmlchemy.h"
@@ -18,6 +18,7 @@ public:
     CT_PPr(Paragraph *paragraph);
     void setStyle(const QString &style = QString());
     void setAlignment(WD_PARAGRAPH_ALIGNMENT align);
+    QDomElement setSectPr();
     void addOrAssignStyle();
     virtual ~CT_PPr();
 
@@ -26,6 +27,7 @@ public:
 private:
     QDomElement m_style;
     QDomElement m_pStyle;
+    QDomElement m_sectPr;
     Paragraph *m_paragraph;
 
 };

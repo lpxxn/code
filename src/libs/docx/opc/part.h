@@ -25,6 +25,7 @@ public:
     Relationships *rels() const;
     virtual void afterUnmarshal();
     QString relateTo(Part *target, const QString &reltype, const QString &baseUri, bool isExternal = false, const QString &targetRef = QString());
+    Part *partRelatedBy(const QString &reltype) const;
     virtual ~Part();
 
 protected:

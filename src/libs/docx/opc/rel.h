@@ -38,7 +38,7 @@ class Relationships
 public:
     Relationships(const QString &baseURI);
     Relationship *addRelationship(const QString &reltype, const QString &targetRef, Part *target, const QString &rId, bool external = false);
-    Part *partWithReltype(const QString &reltype);
+    Part *partWithReltype(const QString &reltype) const;
     int count() const;
     QMap<QString, Relationship *> rels() const;
     QByteArray blob() const;
@@ -46,10 +46,11 @@ public:
     Relationship * getOrAddExtPart(const QString &reltype, const QString &targetref);
     virtual ~Relationships();
 
+    QString nextrId();
+
 private:
     Relationship *getMatching(const QString &reltype, Part *target);
     Relationship *getMatchingExt(const QString &reltype, const QString &targetref);
-    QString nextrId();
 
 private:
     QString m_baseURI;    

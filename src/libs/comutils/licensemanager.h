@@ -1,4 +1,4 @@
-/*! \file
+﻿/*! \file
 *   \brief License管理功能
 *   \author 谭立方
 *   \date 2011-2014

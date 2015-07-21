@@ -9,7 +9,8 @@ namespace Docx {
 class ImagePart : public Part
 {
 public:
-    ImagePart(const PackURI &partName, const QString &contentType, const QByteArray &blob = QByteArray(), Image *image = nullptr, const QByteArray &hash = QByteArray());    QString fileName() const;
+    ImagePart(const PackURI &partName, const QString &contentType, const QByteArray &blob = QByteArray(), Image *image = nullptr, const QByteArray &hash = QByteArray());
+    QString fileName() const;
     Length defaultCx() const;
     Length defaultCy() const;
     static ImagePart *load(const PackURI &partName, const QString &contentType, const QByteArray &blob = QByteArray(), Image *image = nullptr);

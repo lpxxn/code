@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
 
     CommonUtils::LicenseManager* licMng = CommonUtils::LicenseManager::instance();
     licMng->setCheckBadDate(true);
-    licMng->setDefaultLicensePath("d:/license/simcube/simcube.lic");
+    licMng->setDefaultLicensePath("E:/vim/AC81127CCB21.lic");
 
     QScriptEngine engine;
     qDebug() << engine.availableExtensions();

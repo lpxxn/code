@@ -1,6 +1,7 @@
 #include "document.h"
 #include "./parts/documentpart.h"
 #include "./opc/opcpackage.h"
+#include "./parts/stylespart.h"
 #include "package.h"
 #include "text.h"
 #include "table.h"
@@ -14,9 +15,9 @@ Document::Document()
 {
     qDebug() << "construct docx document.";
     if (QLocale::system().name() == QStringLiteral("zh_CN")) {
-        open(QStringLiteral("://defaultzh_CN.docx"));
+        open(QStringLiteral("./template/defaultzh_CN.docx"));
     } else {
-        open(QStringLiteral("://default.docx"));
+        open(QStringLiteral("./template/default.docx"));
     }
 }
 
@@ -65,17 +66,30 @@ Paragraph *Document::addParagraph(const QString &text, const QString &style)
  */
 Paragraph *Document::addHeading(const QString &text, int level)
 {
+    if  (level > 9)
+        return nullptr;
+
     QString style;
-    if (level == 0)
-        style = "Title";
-    else
-        style = QString("Heading%1").arg(level);
+    StylesPart *sp = m_docPart->stylePart();
+    if (level == 0) {
+        // Title
+        style = sp->titleStyleId();
+    }
+    else {
+        // Heading
+        style = sp->headingStyleId(level);
+    }
     return addParagraph(text, style);
 }
 
 Table *Document::addTable(int rows, int cols, const QString &style)
 {
-    return m_docPart->addTable(rows, cols, style);
+    QString strTableId(style);
+    StylesPart *sp = m_docPart->stylePart();
+    if (strTableId == QStringLiteral("TableGrid"))
+        strTableId = sp->tableGridStyleId();
+
+    return m_docPart->addTable(rows, cols, strTableId);
 }
 
 InlineShape *Document::addPicture(const QString &imgPath, const Length &width, const Length &height)
@@ -119,6 +133,11 @@ Document::~Document()
     qDebug() << "delete Docx::Document.";
     delete m_docPart;
     delete m_package;
+}
+
+Section *Document::addSection()
+{        
+    return m_docPart->addSection();
 }
 
 void Document::save(const QString &path)

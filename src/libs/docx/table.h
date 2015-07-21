@@ -10,6 +10,7 @@
 #include <QSharedPointer>
 
 namespace Docx {
+
 class DocumentPart;
 class Paragraph;
 class Column;

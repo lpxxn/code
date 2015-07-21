@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:styles>
+	<w:style w:type="paragraph" w:styleId="ListBullet">
+		<w:name w:val="List Bullet"/>
+		<w:basedOn w:val="Normal"/>
+		<w:uiPriority w:val="99"/>
+		<w:unhideWhenUsed/>
+		<w:rsid w:val="00326F90"/>
+		<w:pPr>
+			<w:numPr>
+				<w:ilvl w:val="0"/>
+				<w:numId w:val="1"/>
+			</w:numPr>
+			<w:contextualSpacing/>
+		</w:pPr>
+	</w:style>
+	<w:style w:type="paragraph" w:styleId="ListNumber">
+		<w:name w:val="List Number"/>
+		<w:basedOn w:val="Normal"/>
+		<w:uiPriority w:val="99"/>
+		<w:unhideWhenUsed/>
+		<w:rsid w:val="00326F90"/>
+		<w:pPr>
+			<w:numPr>
+				<w:ilvl w:val="0"/>
+				<w:numId w:val="5"/>
+			</w:numPr>
+			<w:contextualSpacing/>
+		</w:pPr>
+	</w:style>
+</w:styles>

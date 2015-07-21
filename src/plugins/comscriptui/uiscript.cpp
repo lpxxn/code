@@ -1,4 +1,4 @@
-#include "uiscript.h"
+﻿#include "uiscript.h"
 #include "uiloader.h"
 
 #include <comguiutils/commonguiutils.h>

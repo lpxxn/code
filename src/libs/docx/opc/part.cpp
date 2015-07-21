@@ -1,7 +1,10 @@
-#include "part.h"
+﻿#include "part.h"
 #include "constants.h"
 #include "../parts/imagepart.h"
 #include "../parts/documentpart.h"
+#include "../parts/stylespart.h"
+#include "../parts/headerorfooterpart.h"
+#include "../parts/numberingpart.h"
 #include "opcpackage.h"
 #include "rel.h"
 
@@ -70,6 +73,16 @@ QString Part::relateTo(Part *target, const QString &reltype, const QString &base
     return ship->rId();
 }
 
+/*!
+ * \brief 根据type得到Part
+ * \param reltype
+ * \return
+ */
+Part *Part::partRelatedBy(const QString &reltype) const
+{
+    return m_rels->partWithReltype(reltype);
+}
+
 Part::~Part()
 {
     delete m_rels;
@@ -82,19 +95,29 @@ PartFactory::PartFactory()
 
 Part *PartFactory::newPart(const PackURI &partname, const QString &contentType, const QString &reltype, const QByteArray &blob, Package *package)
 {
-    if (reltype == Constants::IMAGE){
+    if (reltype == Constants::IMAGE) {
         return ImagePart::load(partname, contentType, blob);
     }
+
     if (contentType == Constants::WML_DOCUMENT_MAIN) {
         return DocumentPart::load(partname, contentType, blob, package);
     }
-    //    else if (contentType == Constants::OPC_CORE_PROPERTIES) {
-    //        return nullptr;
-    //    } else if (contentType == Constants::WML_NUMBERING) {
-    //        return nullptr;
-    //    } else if (contentType == Constants::WML_STYLES) {
-    //        return nullptr;
-    //    }
+
+    if (contentType == Constants::WML_STYLES) {
+        return StylesPart::load(partname, contentType, blob);
+    }
+
+    if (contentType == Constants::WML_NUMBERING) {
+        return NumberingPart::load(partname, contentType, blob);
+    }
+
+    if (contentType == Constants::WML_HEADER) {
+        return HeaderPart::load(partname, contentType, blob, package);
+    }
+
+    if (contentType == Constants::WML_FOOTER) {
+        return FooterPart::load(partname, contentType, blob, package);
+    }
 
     return Part::load(partname, contentType, blob, package);
 }

@@ -1,0 +1,11 @@
+ 
+ ==== Aerodynamic Analysis Input File ====
+
+$?${"id": "b", "desc": "Wing Span", "properties": {"units": "ft"}, "enumValue": {"enabled": true, "index":0, "values":[40, 41, 44], "names": ["abc", "adfsd"]}, "type": "IntegerParameter", "value": 45, "regexp": "([0-9.]+)"}
+Wing Span (ft)              b     =  45
+$?${"id": "Swing", "group": "输入参数", "desc": "Surface Area of the Wing", "type": "DoubleParameter", "properties": {"units": "ft^2"}, "format" : {"enabled":true, "f": 102, "p": 5}, "value": 300.0, "regexp": "([0-9.]+) "}
+Surface Area of the Wing    Swing = 300.0  ft^2
+$?${"id": "Lfuse", "group": "输入参数", "desc": "Length of Fuselage", "type": "DoubleParameter", "properties": {"units": "ft"}, "value": 20.0, "regexp": "([0-9.]+)"}
+Length of Fuselage          Lfuse =  20.0  ft
+$?${"id": "Dfuse", "group": "输入参数", "desc": "Diameter of Fuselage", "type": "DoubleParameter", "properties": {"units": "ft"}, "value": 5.0, "regexp": "([0-9.]+)"}
+Diameter of Fuselage        Dfuse =   5.0  ft

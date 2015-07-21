@@ -1,0 +1,8 @@
+ 
+ ==== Aerodynamic Analysis Input File ====
+
+Wing Span (ft)              b     =  40
+Surface Area of the Wing    Swing = 300.00000 ft^2
+Length of Fuselage          Lfuse =  20.000000  ft
+Diameter of Fuselage        Dfuse =   7.900000  ft
+

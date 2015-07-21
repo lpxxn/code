@@ -109,6 +109,18 @@ QException *InvalidSpanError::clone() const
     return new InvalidSpanError(*this);
 }
 
+QDomDocument docXmlDom(const QString &xmlPath)
+{
+    QDomDocument tempDoc;
+    QFile styleFile(xmlPath);
+    if (!styleFile.open(QIODevice::ReadOnly))
+        return tempDoc;
+
+    tempDoc.setContent(&styleFile);
+    styleFile.close();
+    return tempDoc;
+}
+
 }
 
 

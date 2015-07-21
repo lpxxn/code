@@ -13,6 +13,9 @@ namespace Docx {
 class ImagePart;
 class ImageParts;
 class Image;
+class HeaderPart;
+class FooterPart;
+class HeaderAndFooterParts;
 
 class Package : public OpcPackage
 {
@@ -22,15 +25,18 @@ public:
     static Package* open(const QString &pkgFile);
     static Package* open(QIODevice *device);
     void save(const QString &filePath);
-    void afterUnmarshal();
+    void afterUnmarshal();    
     ImageParts *imageparts() const;
+    HeaderAndFooterParts * headerAndFooterParts() const;
     virtual ~Package();
 
 private:
     void gatherImageParts(const QMap<QString, Relationship *> &rels);
+    void gatherHeaderAndFooterParts(const QMap<QString, Relationship *> &rels);
 
 private:
     ImageParts *m_imageParts;
+    HeaderAndFooterParts *m_headerFooterParts;
 };
 
 class ImageParts
@@ -50,6 +56,21 @@ private:
 
 private:
     QList<ImagePart *> m_imageparts;
+};
+
+class HeaderAndFooterParts
+{
+public:
+    HeaderAndFooterParts();
+    void appendHeader(HeaderPart *part);
+    void appendFooter(FooterPart *part);
+    QList<HeaderPart*> headers() const;
+    QList<FooterPart*> footers() const;
+    ~HeaderAndFooterParts();
+
+private:
+    QList<HeaderPart*> m_headers;
+    QList<FooterPart*> m_footers;
 };
 
 }

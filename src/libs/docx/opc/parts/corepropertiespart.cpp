@@ -9,7 +9,7 @@ CorePropertiesPart::CorePropertiesPart(const QString &partName, const QString &c
 
 }
 
-void CorePropertiesPart::load(const QString &partName, const QString &contentType, const QByteArray &blob, Package *package)
+void CorePropertiesPart::load(const QString & /*partName*/, const QString & /*contentType*/, const QByteArray & /*blob*/, Package * /*package*/)
 {
 
 }

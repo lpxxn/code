@@ -1,0 +1,9 @@
+
+ ==== Aerodynamic Analysis Output File ==== 
+
+$?${"id": "SurfaceArea", "group": "输出参数", "desc": "Surface Area of the Fuselage", "type": "DoubleParameter", "value": 260.49, "properties": {"units": "ft^2"}, "regexp": ".+=\\s*([0-9.]+)\\s*.*"}
+Surface Area of the Fuselage =          260.49  ft^2
+$?${"id": "WettedArea", "group": "输出参数", "desc": "Wetted Area of the Aircraft", "type": "DoubleParameter", "value": 901.324, "properties": {"units": "ft^2"}, "regexp": ".+=\\s*([0-9.]+)\\s*.*"}
+Wetted Area of the Aircraft  =         901.324  ft^2
+$?${"id": "LiftDrag", "group": "输出参数", "desc": "Lift/Drag of the Aircraft", "type": "DoubleParameter", "value": 14.9868, "properties": {"units": "ft^2"}, "regexp": ".+=\\s*([0-9.]+)\\s*.*"}
+Lift/Drag of the Aircraft    =         14.9868

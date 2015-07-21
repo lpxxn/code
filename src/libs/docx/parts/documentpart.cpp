@@ -2,11 +2,18 @@
 #include "../text.h"
 #include "../table.h"
 #include "../opc/oxml.h"
+#include "../opc/constants.h"
 #include "../shape.h"
 #include "../oxml/oxmlshape.h"
+#include "../oxml/oxmltext.h"
 #include "../package.h"
+#include "../shared.h"
+#include "../section.h"
+#include "stylespart.h"
+#include "numberingpart.h"
 #include "imagepart.h"
 
+#include <QFile>
 #include <QDebug>
 
 namespace Docx
@@ -18,6 +25,7 @@ DocumentPart::DocumentPart(const QString &partName, const QString &contentType, 
     m_dom = new QDomDocument();
     m_dom->setContent(blob);
     m_inlineshapes = new InlineShapes(this);
+    m_sections = new Sections(this);
 }
 
 Paragraph *DocumentPart::addParagraph(const QString &text, const QString &style)
@@ -44,8 +52,7 @@ DocumentPart *DocumentPart::load(const PackURI &partName, const QString &content
 }
 
 Table *DocumentPart::addTable(int rows, int cols, const QString &style)
-{
-
+{    
     QDomNode n = lastsectPr();
     QDomNode parentNode = n.parentNode();
 
@@ -67,6 +74,11 @@ Table *DocumentPart::addTable(int rows, int cols, const QString &style)
 void DocumentPart::afterUnmarshal()
 {
     qDebug() << "afetrUnmarshal";
+    checkNumbering();
+    numberingPart();
+    stylePart();
+    m_stylePart->checkNumberingStyle(m_numberingPart);
+
 }
 
 QDomDocument *DocumentPart::element() const
@@ -138,6 +150,24 @@ QList<Table *> DocumentPart::tables()
     return m_tables;
 }
 
+StylesPart *DocumentPart::stylePart()
+{
+    if (!m_stylePart) {
+        Part *stpart = partRelatedBy(Constants::RELATIONSHIP_TYPE_STYLES);
+        m_stylePart = dynamic_cast<StylesPart*>(stpart);
+    }
+    return m_stylePart;
+}
+
+NumberingPart *DocumentPart::numberingPart()
+{
+    if (!m_numberingPart) {
+        Part *stpart = partRelatedBy(Constants::RELATIONSHIP_TYPE_NUMBERING);
+        m_numberingPart = dynamic_cast<NumberingPart*>(stpart);
+    }
+    return m_numberingPart;
+}
+
 DocumentPart::~DocumentPart()
 {
     delete m_inlineshapes;
@@ -158,7 +188,7 @@ DocumentPart::~DocumentPart()
 int DocumentPart::nextId()
 {
     QDomNodeList eles = m_dom->childNodes();
-    QList<QString> numbers;
+    QStringList numbers;
     findAttributes(eles, QStringLiteral("id"), &numbers);
 
     int size = numbers.count() + 2;
@@ -169,13 +199,26 @@ int DocumentPart::nextId()
     return 1;
 }
 
+Section *DocumentPart::addSection()
+{
+    Paragraph *paragraph = addParagraph(QString());
+    CT_PPr *pstyle = paragraph->m_style;
+    Section *section = m_sections->addSection(pstyle->setSectPr());
+    return section;
+}
+
+Package *DocumentPart::package()
+{
+    return m_package;
+}
+
 /*!
  * \brief DocumentPart::findAttributes
  * \param eles
  * \param attr
  * \param nums
  */
-void DocumentPart::findAttributes(const QDomNodeList &eles, const QString &attr, QList<QString> *nums)
+void DocumentPart::findAttributes(const QDomNodeList &eles, const QString &attr, QStringList *nums)
 {
     for (int i = 0; i < eles.count(); i++) {
         QString num = eles.at(i).toElement().attribute(attr);
@@ -191,6 +234,22 @@ QDomNode DocumentPart::lastsectPr() const
 
     QDomNode n = nodes.at(nodes.count() - 1);
     return n;
+}
+
+/*!
+ * \brief 查找是否有numbering.xml
+ */
+void DocumentPart::checkNumbering()
+{
+    Part *stpart = partRelatedBy(Constants::RELATIONSHIP_TYPE_NUMBERING);
+    if (stpart)
+        return;
+
+    QDomDocument tempDoc = docXmlDom(Constants::TEMPLATE_NUMBERING_PATH);
+
+    const QString numId(m_rels->nextrId());
+    NumberingPart *part = NumberingPart::load(QStringLiteral("word/numbering.xml"), Constants::WML_NUMBERING, tempDoc.toByteArray());
+    m_rels->addRelationship(Constants::RELATIONSHIP_TYPE_NUMBERING, QStringLiteral("numbering.xml"), part, numId);
 }
 
 InlineShapes::InlineShapes(DocumentPart *part)

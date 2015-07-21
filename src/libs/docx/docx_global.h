@@ -1,4 +1,4 @@
-#ifndef DOCX_GLOBAL_H
+﻿#ifndef DOCX_GLOBAL_H
 #define DOCX_GLOBAL_H
 
 #include <QtCore/qglobal.h>

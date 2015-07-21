@@ -1,4 +1,4 @@
-#include "oxmltext.h"
+﻿#include "oxmltext.h"
 #include "../text.h"
 #include "../shared.h"
 
@@ -46,6 +46,28 @@ void CT_PPr::setAlignment(WD_PARAGRAPH_ALIGNMENT align)
     QString str = paragraphAlignToString(align);
     alignStyle.setAttribute(QStringLiteral("w:val"), str);
 
+}
+
+QDomElement CT_PPr::setSectPr()
+{
+    addOrAssignStyle();
+
+    QDomNodeList nodes = m_style.elementsByTagName(QStringLiteral("w:sectPr"));
+    if (nodes.isEmpty()) {
+        const QString strSect = R"~(<w:sectPr w:rsidR="007B02FF">
+                <w:pgSz w:w="12240" w:h="15840"/>
+                <w:pgMar w:top="1440" w:right="1800" w:bottom="1440" w:left="1800" w:header="708" w:footer="708" w:gutter="0"/>
+                <w:cols w:space="708"/>
+                <w:docGrid w:linePitch="360"/>
+                </w:sectPr>)~";
+                QDomDocument tempDoc;
+        tempDoc.setContent(strSect);
+        m_sectPr = tempDoc.firstChildElement();
+        m_style.appendChild(m_sectPr);
+    } else {
+        m_sectPr = nodes.at(0).toElement();
+    }
+    return m_sectPr;
 }
 
 void CT_PPr::addOrAssignStyle()

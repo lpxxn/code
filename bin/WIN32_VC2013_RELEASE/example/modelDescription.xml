@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiModelDescription fmiVersion="1.0" modelName="ControlledTemperature" modelIdentifier="ControlledTemperature" description="Automated FMU export" generationTool="SimulationX 3.6.3.28125 (15.05.14) x64" generationDateAndTime="2014-06-18T15:57:03" variableNamingConvention="structured" numberOfContinuousStates="1" numberOfEventIndicators="2" author="" guid="{D90921D9-824F-445C-B397-9C39D14D7945}">
+<DefaultExperiment startTime="0" stopTime="10" tolerance="1e-005"/>
+<ModelVariables>
+<ScalarVariable name="heatCapacitor.T" valueReference="1879048192" description="" variability="continuous" causality="internal">
+<Real start="293.14999999999998" fixed="true" nominal="300" min="0"/>
+</ScalarVariable>
+<ScalarVariable name="onOffController.reference" valueReference="536870912" description="Connector of Real input signal used as reference signal" variability="continuous" causality="input">
+<Real start="0." fixed="true"/>
+</ScalarVariable>
+<ScalarVariable name="temperatureSensor.T" valueReference="805306368" description="Absolute temperature in degree Celsius as output signal" variability="continuous" causality="output">
+<Real/>
+</ScalarVariable>
+</ModelVariables>
+<Implementation><CoSimulation_StandAlone><Capabilities canHandleVariableCommunicationStepSize="true" canHandleEvents="true" canRejectSteps="false" canInterpolateInputs="true" maxOutputDerivativeOrder="0" canRunAsynchronuously="false" canSignalEvents="false" canBeInstantiatedOnlyOncePerProcess="false" canNotUseMemoryManagementFunctions="true"/></CoSimulation_StandAlone></Implementation>
+</fmiModelDescription>
